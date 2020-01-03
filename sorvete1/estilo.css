@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*:before, *:after{
+	box-sizing: border-box;
+}
+html, body{
+	min-height: 100%;
+}
+body {
+    font-family: 'Fredoka One', cursive;
+    background-color: rgb(82, 83, 102);
+}
+h1 {
+    padding: 10px;
+    margin: auto;
+    margin-top: 18px;
+    width: 70%;
+    font-size: 50px;
+    color: white;
+    background-color: rgb(94, 98, 171);
+    text-align: center;
+    transition-duration: 0.5s;
+}
+h1:hover {
+    transform: scale(1.2);
+    margin-bottom: 10px;
+}
+.tela {
+    position: absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: white;
+    border-radius: 6%;
+    width: 60%;
+    height: 15cm;
+}
+/* for the ice cream and shadow */
+.sorvete{
+    position: absolute;
+    margin-top: 4cm;
+    height: 6cm;
+    margin-left: 11cm;
+    background-color: red;
+    transform: translate3d(-50%, -50%, 0);
+    transition-duration: 0.5s;
+}
+.sorvete:before{
+	content: "";
+    position: absolute;
+    margin-top: 4cm;
+    bottom: -7cm;
+	width: 10vw;
+	height: 2.5vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	-webkit-filter: blur(20px);
+	filter: blur(20px);
+}
+.sorvete:hover {
+    transform: scale(0.9);
+    margin-top: 2cm;
+}
+.sorvete .gelo{
+    position: absolute;
+	background-color: #FF729F;
+	border-radius: 50%;
+	width: 10vw;
+	height: 10vw;
+	z-index: 0;
+}
+.sorvete .ponto{
+    position: absolute;
+	background-color: #FF729F;
+	border-radius: 50%;
+	width: 1.66667vw;
+	height: 1.66667vw;
+	top: 7.5vw;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+.sorvete .ponto:nth-of-type(2){
+	left: 3.33333vw;
+}
+.sorvete .ponto:nth-of-type(3){
+	left: 6.66667vw;
+}
+.sorvete .ponto:before{
+    content: "";
+    position: absolute;
+    margin-left:auto;
+    margin-right:auto;
+	left: 100%;
+	border-radius: 50%;
+	background-color: #FF729F;
+	width: 100%;
+	height: 100%;
+}
+/* for the cone */
+.sorvete .casca{
+    position: absolute;
+    margin-bottom: 8cm;
+    margin-left:auto;
+    margin-right:auto;
+	top: 7.5vw;
+	z-index: 1;
+}
+.sorvete .casca:before{
+    content: "";
+    position: absolute;
+    margin-bottom: 8cm;
+	border-top: 20vw solid #CF9950;
+	border-left: 5vw solid transparent;
+	border-right: 5vw solid transparent;
+}
+footer {
+    margin: auto;
+    margin-top: 17cm;
+    color: white;
+    padding: 3px;
+    width: 10%;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+footer:hover {
+    transform: scale(2.2);
+}
